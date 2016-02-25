@@ -1,2 +1,3 @@
 # webService-test
-a simple demo with webservice
+a simple webservice demo based on soap.
+
