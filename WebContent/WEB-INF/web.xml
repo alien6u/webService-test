@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+  
+<!DOCTYPE web-app  
+    PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.2//EN"  
+    "http://java.sun.com/j2ee/dtds/web-app_2_2.dtd">  
+  
+<web-app>  
+    <servlet>  
+        <servlet-name>DemoSend</servlet-name>  
+        <servlet-class>cody.soap.demo.DemoSend</servlet-class>  
+    </servlet>  
+  
+    <servlet>  
+        <servlet-name>DemoReceiver</servlet-name>  
+        <servlet-class>cody.soap.demo.DemoReceiver</servlet-class>  
+    </servlet>  
+  
+    <servlet-mapping>  
+        <servlet-name>DemoSend</servlet-name>  
+        <url-pattern>/DemoSend</url-pattern>  
+    </servlet-mapping>  
+  
+    <servlet-mapping>  
+        <servlet-name>DemoReceiver</servlet-name>  
+        <url-pattern>/DemoReceiver</url-pattern>  
+    </servlet-mapping>  
+</web-app>  
