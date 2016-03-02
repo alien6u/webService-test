@@ -1,0 +1,18 @@
+<beans xmlns="http://www.springframework.org/schema/beans" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:jaxws="http://cxf.apache.org/jaxws" 
+	xsi:schemaLocation=" http://www.springframework.org/schema/beans 
+		http://www.springframework.org/schema/beans/spring-beans.xsd 
+		http://cxf.apache.org/jaxws 
+		http://cxf.apache.org/schemas/jaxws.xsd">
+	 <bean id="bookServiceImpl" class="cody.soap.demo.service.impl.BookServiceImpl"></bean>  	
+		
+    <jaxws:endpoint id="bookService" implementor="#bookServiceImpl" address="/bookService">
+        <jaxws:properties>
+            <entry key="schema-validation-enabled" value="true"/>
+        </jaxws:properties>
+        <jaxws:dataBinding>
+            <bean class="org.apache.cxf.xmlbeans.XmlBeansDataBinding"/>
+        </jaxws:dataBinding>
+    </jaxws:endpoint>
+</beans>
